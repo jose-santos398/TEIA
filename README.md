@@ -4,9 +4,8 @@ jose-santos398.github.io/Teia/
 
 MEMBROS DO GRUPO: 
 
-Cleverson Amorim de Lima
-Italo Araújo Teixeira
+Cleverson Amorim de Lima,
+Italo Araújo Teixeira,
 José Luiz Souza Santos
-Lucas Willians de Souza Magueta
-Miguel de Souza Alves.
+Lucas Willians de Souza Magueta,
 
