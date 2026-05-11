@@ -1,15 +1,14 @@
 # FRONTEND
 FROM node:20 AS frontend
 
-WORKDIR /app
+WORKDIR /app/frontend
 
-COPY package*.json ./
-
+COPY frontend/package*.json ./
 RUN npm install
 
-COPY . .
-
+COPY frontend/ ./
 RUN npm run build
+
 
 # BACKEND
 FROM eclipse-temurin:17
@@ -21,7 +20,6 @@ COPY sitebackend ./sitebackend
 WORKDIR /app/sitebackend
 
 RUN chmod +x mvnw || true
-
 RUN ./mvnw clean package -DskipTests || mvn clean package -DskipTests
 
 RUN mv target/*.jar app.jar
