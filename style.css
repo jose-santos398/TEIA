@@ -1,0 +1,1025 @@
+/* ==================== RESET ==================== */
+* {  
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  box-sizing: border-box; /* Faz com que largura/altura incluam bordas e padding */
+}
+
+/* ==================== BODY ==================== */
+
+body {
+  background: linear-gradient(to bottom right, #171717, #00122d, #230286, #00122d, #171717); /* Deixa um gradiente diagonal no fundo */
+  min-height: 100vh; /* Faz o body ocupar no mínimo 100% da altura da tela */
+  color: white; /* Cor padrão do texto */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* ==================== HEADER ==================== */
+
+header {
+  position: static; /* Header não é fixo */
+  top: 0; /* Se fosse fixo, ficaria colado no topo */
+  left: 0; /* Se fosse fixo, ficaria colado à esquerda */
+  width: 100%; /* Ocupa 100% da largura */
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Espaça os itens do header (logo à esquerda, nav à direita) */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 10px 40px; /* Espaçamento interno: 10px vertical, 40px horizontal */
+  z-index: 1000; /* Mantém o header acima de outros elementos */
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista para o header */
+  transition: transform 0.3s ease; /* Transição suave para efeitos */
+}
+
+header .logo {
+  display: flex; /* Logo é flex para alinhar elementos (img + texto) */
+  align-items: center; /* Centraliza logo e texto verticalmente */
+  gap: 3px; /* Espaço entre logo e nome */
+  cursor: pointer; /* Mãozinha ao passar por cima */
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+header .logo img {
+  width: 100px; /* Largura fixa da logo */
+  height: auto; /* Mantém proporção da imagem */
+  transition: transform 0.3s ease; /* Transição suave */
+  transform: translate(-3px); /* Move levemente para a esquerda */
+}
+
+header .logo img:hover {
+  transform: translateY(-3px); /* Sobe levemente ao passar o mouse */
+}
+
+header .brand-name {
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+  font-size: 1.7rem; /* Tamanho do texto */
+  font-weight: 700; /* Texto bem forte */
+  color: #fff; /* Branco */
+  letter-spacing: 2px; /* Espaço entre letras */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  text-decoration: none; /* Remove underline */
+}
+
+header .brand-name:hover {
+  transform: translateY(-3px); /* Sobe ao passar o mouse */
+}
+
+nav ul {
+  list-style: none; /* Remove marcadores da lista */
+  display: flex; /* Flexbox para alinhar os links */
+  gap: 2.5rem; /* Espaço entre os links */
+  transition: 0.3s; /* Transição suave */
+}
+
+nav ul li:hover {
+  transform: translateY(-3px); /* Sobe o item ao passar o mouse */
+  transition: 0.3s;
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Texto branco */
+  font-weight: 600; /* Texto semi-negrito */
+  font-size: 1.2rem; /* Tamanho médio */
+  transition: 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+  color: rgb(194, 194, 194); /* Cinza ao passar o mouse */
+  transform: translateY(-3px); /* Sobe */
+}
+
+/* ==================== HERO SECTION ==================== */
+
+main {
+  margin: 12px; /* Espaçamento ao redor */
+}
+
+.welcome-message {
+  text-align: left; /* Texto alinhado à esquerda */
+  padding: 2rem 4rem 10rem; /* Espaço interno: 6 em cima, 4 nos lados, 4 em baixo */
+  max-width: 900px; /* Limita a largura */
+  margin-left: 2rem; /* Afasta da esquerda */
+  margin-right: auto; /* Mantém alinhado à esquerda */
+}
+
+.welcome-message h1 {
+  font-size: 2.8rem; /* Título grande */
+  margin-bottom: 0.5rem; /* Espaço embaixo */
+}
+
+.welcome-message p {
+  font-size: 1.3rem; /* Texto médio */
+  margin-top: 1rem; /* Espaço acima */
+  color: #ccc; /* Cinza claro */
+}
+
+.cta-button {
+  display: inline-block; /* Botão em linha */
+  margin-top: 3rem; /* Espaço acima */
+  padding: 1rem 2.5rem; /* Espaço interno */
+  font-size: 1.2rem; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
+  border-radius: 30px; /* Bordas arredondadas */
+  background: #0f0f0f84; /* Fundo preto transparente */
+  color: #fff; /* Texto branco */
+  border: 2px solid rgb(2, 46, 166); /* Borda azul */
+  text-decoration: none; /* Sem underline */
+  transition: 0.3s; /* Transição suave */
+}
+
+.cta-button:hover {
+  background: rgb(2, 46, 166); /* Azul no hover */
+  color: #ffdcdc; /* Texto rosado */
+}
+
+/* ==================== SECTION LABEL ==================== */
+
+.section-label {
+  font-size: 2rem; /* Tamanho */
+  font-weight: 600; /* Negrito */
+  color: #cfcfcf; /* Cinza claro */
+  margin-bottom: 150px; /* Espaço abaixo */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+  text-transform: uppercase; /* Deixa tudo maiúsculo */
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+  text-align: center; /* Centralizado */
+  display: block; /* Força comportamento de bloco */
+}
+
+/* ==================== SECTION SIDE-BY-SIDE ==================== */
+
+.info-image-section {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: space-between; /* Espaça conteúdo */
+  padding: 4rem 9%; /* Espaçamento interno */
+  gap: 7rem; /* Espaço entre imagem e texto */
+  flex-wrap: wrap; /* Quebra em telas pequenas */
+  background-color: rgba(10,23,55,0.5); /* Fundo semitransparente */
+  border: 2px solid rgba(0, 0, 255, 0.226); /* Borda azul clara */
+  border-radius: 20px; /* Cantos arredondados */
+}
+
+.info-box {
+  flex: 1; /* Ocupa o espaço disponível */
+  min-width: 300px; /* Largura mínima */
+}
+
+.info-box h2 {
+  margin-bottom: 0.8rem; /* Espaço abaixo */
+  font-size: 2rem; /* Tamanho */
+  font-weight: 600; /* Negrito */
+}
+
+.image-container {
+  flex: 1; /* Ocupa espaço igual ao info-box */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza imagem */
+}
+
+.image-container img {
+  max-width: 65%; /* Limita largura */
+  height: auto; /* Mantém proporção */
+}
+/* ==================== ==================== */
+/* ==================== MAIN CONTINUED SECTION (CARDS) ==================== */
+
+.section-title {
+  text-align: center; /* Centraliza título */
+  font-size: 2rem; /* Tamanho */
+  font-weight: 700; /* Negrito forte */
+  color: #ffffff; /* Branco */
+  margin-top: 120px; /* Espaço em cima */
+  letter-spacing: 1px; /* Espaço entre letras */
+  text-transform: uppercase; /* Maiúsculas */
+}
+
+.cards-container {
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: stretch; /* Estica os cartões igualmente */
+  gap: 2rem; /* Espaço entre cartões */
+  padding: 4rem 8%; /* Espaçamento interno */
+  flex-wrap: wrap; /* Quebra em telas pequenas */
+}
+
+.custom-card {
+  flex: 1; /* Se ajusta */
+  min-width: 280px; /* Largura mínima */
+  max-width: 350px; /* Largura máxima */
+  background: #202020; /* Fundo escuro */
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 2rem 1rem; /* Espaço interno */
+  text-align: center; /* Texto centralizado */
+  box-shadow: 0 0 15px rgba(0,0,0,0.4); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações */
+}
+
+.custom-card:hover {
+  transform: translateY(-8px); /* Sobe ao passar mouse */
+  box-shadow: 0 0 25px rgba(0,0,0,0.6); /* Sombra mais forte */
+}
+
+.custom-icon {
+  font-size: 2.5rem; /* Ícone grande */
+  margin-bottom: 1rem; /* Espaço abaixo */
+}
+
+.icon-blue { color: #3a6dff; } /* Ícone azul */
+.icon-red { color: #ff4444; } /* Ícone vermelho */
+.icon-yellow { color: #fbc531; } /* Ícone amarelo */
+
+.custom-card h5 {
+  font-weight: 600; /* Semi-negrito */
+  margin-bottom: 0.5rem; /* Espaço abaixo */
+}
+
+.custom-card p {
+  font-size: 0.95rem; /* Texto pequeno */
+  color: #ccc; /* Cinza claro */
+}
+
+/* ==================== FOOTER ==================== */
+
+footer {
+  text-align: center; /* Centralizado */
+  padding: 2rem; /* Espaço interno */
+  margin-top: 3rem; /* Espaço acima */
+  font-size: 1rem; /* Tamanho do texto */
+  color: #d6d6d6; /* Cinza claro */
+}
+
+/* ==================== LOGIN PAGE ==================== */
+
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* Subtrai header e footer */
+  padding: 2rem;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center; /* Centraliza o formulário */
+}
+
+.login-form-section {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(32, 32, 32, 0.95); /* Fundo escuro semitransparente */
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 255, 0.226);
+}
+
+/* Ajuste para formulário de cadastro ser um pouco maior */
+.cadastro-form-section {
+  max-width: 980px;
+}
+
+.cadastro-frames-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.cadastro-frame {
+  background: rgba(10, 10, 10, 0.35);
+  border: 1px solid rgba(0, 0, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+
+.cadastro-frame-title {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.cadastro-frame .form-group + .form-group {
+  margin-top: 1rem;
+}
+
+.login-form-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #cfcfcf;
+  font-size: 1rem;
+}
+
+.form-group input {
+  padding: 0.8rem 1rem;
+  border: 2px solid rgba(0, 0, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(10, 10, 10, 0.8);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgb(2, 46, 166);
+  box-shadow: 0 0 10px rgba(2, 46, 166, 0.3);
+}
+
+.form-group input::placeholder {
+  color: #888;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  display: block;
+  line-height: 1.3;
+}
+
+.form-message {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.form-message.success {
+  background-color: rgba(34, 197, 94, 0.2);
+  border: 1px solid #22c55e;
+  color: #4ade80;
+}
+
+.form-message.error {
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #ff6b6b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background: #0f0f0f84;
+  color: #fff;
+  border: 2px solid rgb(2, 46, 166);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+
+.login-button:hover:not(:disabled) {
+  background: rgb(2, 46, 166);
+  color: #ffdcdc;
+  transform: translateY(-2px);
+}
+
+.login-button:disabled {
+  background: #333;
+  border-color: #555;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.signup-link p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+}
+
+.signup-link a {
+  color: #4d80ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #6699ff;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 992px) {
+  header {
+    padding: 15px 30px; /* Reduz padding */
+  }
+
+  nav ul {
+    gap: 1.5rem; /* Reduz espaço entre links */
+  }
+
+  .welcome-message h1 {
+    font-size: 2.2rem; /* Reduz título */
+  }
+
+  .cadastro-frames-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Header em coluna */
+    align-items: center; /* Centraliza */
+    padding: 15px 20px; /* Reduz padding */
+  }
+
+  nav ul {
+    flex-direction: column; /* Links em coluna */
+    align-items: center; /* Centraliza */
+    gap: 1rem; /* Espaço entre links */
+    margin-top: 10px; /* Espaço em cima */
+  }
+
+  .welcome-message h1 {
+    font-size: 2rem; /* Menor título */
+  }
+
+  .welcome-message p {
+    font-size: 1.1rem; /* Texto menor */
+  }
+
+  .info-image-section {
+    flex-direction: column; /* Coloca imagem e texto em coluna */
+    text-align: center; /* Centraliza texto */
+  }
+
+  .image-container img {
+    max-width: 100%; /* Imagem ocupa toda largura */
+  }
+
+  .login-form-section {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .cadastro-form-section {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .login-form-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/*SOBRE NOS GRID*/
+
+.sobre-container {
+  padding: 3rem 8%;
+  text-align: center;
+}
+
+.sobre-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sobre-intro p {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.sobre-missao {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.sobre-equipe .equipe-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.equipe-card {
+  background: #202020;
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 180px;
+  text-align: center;
+}
+
+.equipe-card img {
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.equipe-card {
+  background: #202020;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 200px;          /* Largura fixa do card */
+  text-align: center;
+  overflow: hidden;      /* Impede que a imagem saia do card */
+}
+
+.equipe-card img {
+  width: 120px;          /* Ajuste conforme preferir */
+  height: 120px;         /* Mantém proporção quadrada */
+  object-fit: cover;     /* Faz a imagem preencher sem distorcer */
+  border-radius: 50%;    /* Deixa a imagem redonda */
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.equipe-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.equipe-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Grid responsivo */
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Card fixo */
+.equipe-card {
+  background: #202020;
+  border-radius: 15px;
+  width: 180px;
+  height: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.equipe-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagem ajustada */
+.equipe-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Nome e cargo */
+.equipe-card .nome {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.equipe-card .cargo {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Página de Contato */
+
+/* Container principal */
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Formulário e informações de contato */
+.form-contato, .info-contato {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Inputs e textarea */
+.form-contato input,
+.form-contato textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+/* Botão */
+.form-contato button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c63ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.form-contato button:hover {
+    background-color: #5750d1;
+}
+
+.info-contato h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* ==================== DASHBOARD STYLES ==================== */
+
+.dashboard-main {
+    min-height: calc(100vh - 140px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome-section h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #6c63ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.3);
+}
+
+.card-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.card-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: #00d4ff;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Informações do usuário */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-label {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.info-value {
+    color: white;
+    font-weight: 500;
+}
+
+/* Botões de ação */
+.action-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.action-btn.primary {
+    background: linear-gradient(45deg, #6c63ff, #00d4ff);
+    color: white;
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+.action-btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.action-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Estatísticas */
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #00d4ff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+}
+
+/* Atividades */
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #6c63ff;
+}
+
+.activity-time {
+    font-size: 0.9em;
+    color: #00d4ff;
+    font-weight: 500;
+}
+
+.activity-desc {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Botão de logout no header */
+.logout-btn {
+    color: #ff6b6b !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: #ff4757 !important;
+    transform: translateY(-2px);
+}
+
+/* Link ativo no nav */
+nav ul li a.active {
+    color: #0099cc;
+    border-bottom: 2px solid #0099cc;
+    background: rgba(0, 153, 204, 0.1);
+}
+
+/* Responsividade para dashboard */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+    
+    .dashboard-main {
+        padding: 10px;
+    }
+    
+    .dashboard-container {
+        padding: 0 10px;
+    }
+}
+
+
+/* ==================== ÁREA DO ALUNO ==================== */
+
+.aluno-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Card do aluno */
+.card-aluno {
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 255, 0.226);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.foto-aluno img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card-aluno h2 {
+  margin-bottom: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.nivel {
+  color: #b1b1ff;
+  font-weight: bold;
+}
+
+/* Barra de progresso */
+.progresso-container {
+  margin-top: 20px;
+}
+
+.barra {
+  width: 100%;
+  height: 12px;
+  background: #333;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.barra-preenchida {
+  height: 100%;
+  background: rgb(2, 46, 166);
+  border-radius: 10px;
+}
+
+/* Upload de currículo */
+.upload-cv {
+  margin-top: 25px;
+}
+
+.cv-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(2,46,166);
+  border-radius: 10px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.cv-info {
+  margin-top: 5px;
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+/* CURSOS */
+.cursos-section {
+  width: 100%;
+  text-align: center;
+}
+
+.cursos-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.curso-card {
+  background: #202020;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 255, 0.226);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+  background: #2b2b2b;
+}

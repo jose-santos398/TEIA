@@ -1,0 +1,73 @@
+
+header {
+  position: static; /* Header não é fixo */
+  top: 0; /* Se fosse fixo, ficaria colado no topo */
+  left: 0; /* Se fosse fixo, ficaria colado à esquerda */
+  width: 100%; /* Ocupa 100% da largura */
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Espaça os itens do header (logo à esquerda, nav à direita) */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 10px 40px; /* Espaçamento interno: 10px vertical, 40px horizontal */
+  z-index: 1000; /* Mantém o header acima de outros elementos */
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista para o header */
+  transition: transform 0.3s ease; /* Transição suave para efeitos */
+}
+
+header .logo {
+  display: flex; /* Logo é flex para alinhar elementos (img + texto) */
+  align-items: center; /* Centraliza logo e texto verticalmente */
+  gap: 3px; /* Espaço entre logo e nome */
+  cursor: pointer; /* Mãozinha ao passar por cima */
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+header .logo img {
+  width: 100px; /* Largura fixa da logo */
+  height: auto; /* Mantém proporção da imagem */
+  transition: transform 0.3s ease; /* Transição suave */
+  transform: translate(-3px); /* Move levemente para a esquerda */
+}
+
+header .logo img:hover {
+  transform: translateY(-3px); /* Sobe levemente ao passar o mouse */
+}
+
+header .brand-name {
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+  font-size: 1.7rem; /* Tamanho do texto */
+  font-weight: 700; /* Texto bem forte */
+  color: #fff; /* Branco */
+  letter-spacing: 2px; /* Espaço entre letras */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  text-decoration: none; /* Remove underline */
+}
+
+header .brand-name:hover {
+  transform: translateY(-3px); /* Sobe ao passar o mouse */
+}
+
+nav ul {
+  list-style: none; /* Remove marcadores da lista */
+  display: flex; /* Flexbox para alinhar os links */
+  gap: 2.5rem; /* Espaço entre os links */
+  transition: 0.3s; /* Transição suave */
+}
+
+nav ul li:hover {
+  transform: translateY(-3px); /* Sobe o item ao passar o mouse */
+  transition: 0.3s;
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Texto branco */
+  font-weight: 600; /* Texto semi-negrito */
+  font-size: 1.2rem; /* Tamanho médio */
+  transition: 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+  color: rgb(194, 194, 194); /* Cinza ao passar o mouse */
+  transform: translateY(-3px); /* Sobe */
+}
